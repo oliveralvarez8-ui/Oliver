@@ -1,20 +1,18 @@
+// Punto de entrada de la app: envuelve todo con el proveedor de la colección
+// (para que cualquier pantalla pueda leer/guardar sneakers) y monta la navegación.
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { CollectionProvider } from './context/CollectionContext';
+import { RootNavigator } from './navigation/RootNavigator';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <CollectionProvider>
+        <StatusBar style="light" />
+        <RootNavigator />
+      </CollectionProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
