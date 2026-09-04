@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Política de privacidad — SneakVault</title>
+<meta name="description" content="Política de privacidad de SneakVault: qué datos recogemos, para qué, y tus derechos." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="mark-small" aria-hidden="true">
+        <svg viewBox="8 12 186 128" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#F5F5F7" fill-rule="evenodd" d="M14 140 L180 140 C190 140 194 136 194 128 C194 104 190 70 184 44 C181 30 178 17 168 14 C155 11 137 12 127 19 C123 22 120 27 118 34 C117 38 114 39 111 42 C104 57 89 66 69 72 C50 78 32 86 22 98 C13 108 8 118 8 126 C8 134 9 140 14 140 Z M2 117 C24 123 58 125 100 125 C142 125 176 122 198 115 L198 118.5 C176 125.5 142 128.5 100 128.5 C58 128.5 24 126.5 2 120.5 Z M44 127 C38 113 36 96 40 78 L43.5 79.5 C40 96 42.5 112 48 126 Z M192 47 C182 29 158 21 136 25 C126 27 116 34 107 46 L111.5 49 C121 38 129 33 138 31 C157 27 178 35 186 49 Z M161 43 C156 67 153 97 153 124 L157.5 124 C157.5 97 160.5 67 165.5 44 Z M104 54 L112 49 L114.5 53.5 L106.5 58.5 Z M92 62 L100 57 L102.5 61.5 L94.5 66.5 Z M80 68 L88 63.5 L90.5 68 L82.5 72.5 Z M68 75 L76 70.5 L78.5 75 L70.5 79.5 Z"></path>
+        </svg>
+      </span>
+      <span>SneakVault</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Inicio</a>
+      <a href="privacidad.html" aria-current="page">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </nav>
+  </div>
+</header>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Política de privacidad</h1>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <p class="legal-updated">Última actualización: 2 de septiembre de 2026</p>
+
+    <h3 id="seccion-1">1. Quién es el responsable del tratamiento</h3>
+    <p>
+      <strong>Responsable:</strong> Óliver Álvarez Pérez<br>
+      <strong>Dirección de contacto:</strong> Xosé María Cao, 27891 Cervo, España<br>
+      <strong>Correo electrónico de contacto:</strong>
+      <a href="mailto:support@sneakvault.es">support@sneakvault.es</a><br>
+      <strong>Teléfono de contacto:</strong> 609 75 25 10
+    </p>
+
+    <h3 id="seccion-2">2. Qué datos recogemos y para qué</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Dato</th><th>¿Qué es?</th><th>¿Dónde se guarda?</th><th>¿Para qué se usa?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cuenta (nombre, email, contraseña)</td>
+            <td>Los datos con los que te registras e inicias sesión</td>
+            <td>En Supabase, nuestro proveedor de autenticación. La contraseña nunca la vemos nosotros en texto plano: Supabase la guarda cifrada</td>
+            <td>Crear tu cuenta, identificarte y darte acceso a tu colección y a tu plan Pro</td>
+          </tr>
+          <tr>
+            <td>Foto de perfil (avatar)</td>
+            <td>La imagen que eliges para tu perfil, si decides subir una</td>
+            <td>En Supabase Storage, asociada a tu cuenta</td>
+            <td>Mostrarla en tu perfil dentro de la app</td>
+          </tr>
+          <tr>
+            <td>Foto de la zapatilla</td>
+            <td>La imagen que tomas o eliges en el Escáner</td>
+            <td>Se envía primero, en tránsito, a la API de Claude (Anthropic) para identificarla — eso no cambia. Pero a partir de ahí, <strong>la foto se guarda de forma persistente en Supabase Storage</strong>, asociada a tu cuenta y comprimida (máximo 1200px de lado largo) para ocupar menos espacio, hasta que borres esa zapatilla o tu cuenta</td>
+            <td>Identificar marca, modelo, colorway y precio de reventa de la zapatilla, y poder mostrártela en tu colección desde cualquier sesión</td>
+          </tr>
+          <tr>
+            <td>Datos de tu colección (marca, modelo, talla, estado, precio pagado, notas, fecha)</td>
+            <td>Lo que introduces al guardar una zapatilla</td>
+            <td>En la base de datos de Supabase, asociados a tu cuenta, hasta que borres esa zapatilla o tu cuenta</td>
+            <td>Mostrarte tu colección y sus estadísticas</td>
+          </tr>
+          <tr>
+            <td>Datos de la suscripción (plan elegido, estado de la prueba gratuita, fecha de renovación)</td>
+            <td>Gestionados por Apple y por RevenueCat, nuestro proveedor de gestión de suscripciones</td>
+            <td>En los sistemas de Apple y RevenueCat, no en los nuestros</td>
+            <td>Darte acceso a las funciones Pro y gestionar tu suscripción</td>
+          </tr>
+          <tr>
+            <td>Datos técnicos mínimos de la conexión (p. ej. tu dirección IP, inherente a cualquier petición web)</td>
+            <td>Se genera automáticamente al llamar a nuestro servidor para identificar una zapatilla o gestionar tu cuenta</td>
+            <td>No se registra ni se almacena de forma persistente en nuestros sistemas</td>
+            <td>Únicamente para que la petición técnica funcione</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Importante sobre los datos de tu colección:</strong> a diferencia de una versión anterior de esta política, tu colección (fotos y datos) <strong>ya no vive solo en tu teléfono</strong>: se guarda en nuestra base de datos en la nube (Supabase) para que esté disponible si vuelves a iniciar sesión desde otro dispositivo. Eso sí: solo tú puedes verla, subirla o borrarla (las políticas de acceso de Supabase lo impiden para cualquier otro usuario), y desaparece por completo en cuanto borras esa zapatilla en concreto o tu cuenta entera — desinstalar la app, en cambio, ya no la borra, porque la copia real vive en Supabase, no en tu teléfono.</p>
+
+    <h3 id="seccion-3">3. Base legal de cada tratamiento (art. 6 RGPD)</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Tratamiento</th><th>Base legal</th></tr></thead>
+        <tbody>
+          <tr><td>Creación y gestión de tu cuenta</td><td><strong>Ejecución de un contrato</strong> (art. 6.1.b) — es necesario para poder darte acceso a la app, que ahora requiere estar registrado</td></tr>
+          <tr><td>Envío de la foto a Claude para identificarla</td><td><strong>Ejecución de un contrato</strong> (art. 6.1.b) — es necesario para prestar el servicio que has pedido: identificar tu zapatilla</td></tr>
+          <tr><td>Almacenamiento de tu colección y sus fotos en Supabase</td><td><strong>Ejecución de un contrato</strong> (art. 6.1.b) — es la forma en la que la app te presta el servicio de guardar tu colección y que sigas teniéndola disponible</td></tr>
+          <tr><td>Gestión de la suscripción y el pago</td><td><strong>Ejecución de un contrato</strong> (art. 6.1.b) — necesario para darte acceso a lo que has contratado</td></tr>
+          <tr><td>Funcionamiento técnico mínimo del servidor (IP de la conexión)</td><td><strong>Interés legítimo</strong> (art. 6.1.f) — necesario para que el servicio funcione y para prevenir usos abusivos, con retención mínima</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="seccion-4">4. Decisiones automatizadas: cómo funciona la identificación por IA</h3>
+    <p>Cuando envías una foto al Escáner, la marca, el modelo, el colorway y el precio estimado que ves los genera un proceso <strong>totalmente automatizado</strong>: un modelo de inteligencia artificial (Claude, de Anthropic) analiza la imagen y busca precios en internet, sin que ninguna persona revise el resultado antes de mostrártelo. Esto es relevante porque el RGPD reconoce garantías específicas frente a las decisiones automatizadas:</p>
+    <ul>
+      <li><strong>No es una decisión con efectos legales ni significativos sobre ti.</strong> El resultado es puramente informativo: no determina ningún derecho, obligación, pago, ni tu acceso a la app. Eres tú quien decide qué hacer con esa información.</li>
+      <li><strong>Puede equivocarse</strong>, como cualquier identificación por imagen (ver también la <a href="terminos.html#seccion-5">sección 5 de los Términos de uso</a> sobre el alcance de esta identificación).</li>
+      <li><strong>Siempre puedes corregirla</strong>: puedes editar los datos de cualquier zapatilla ya guardada en tu colección desde su pantalla de detalle, o borrarla directamente.</li>
+      <li>No usamos este proceso para perfilarte como persona, puntuarte, ni para decidir si puedes usar la app o qué pagas por ella.</li>
+    </ul>
+
+    <h3 id="seccion-5">5. Transferencias internacionales de datos</h3>
+    <p>Las fotos que envías al Escáner se procesan por <strong>Anthropic, PBC</strong>, la empresa que opera la API de Claude, con sede en Estados Unidos. Tu cuenta, tu colección y todas sus fotos se gestionan a través de <strong>Supabase</strong>, cuya infraestructura también puede implicar servidores fuera del Espacio Económico Europeo según la región elegida para el proyecto. Todo esto implica transferencias internacionales de datos fuera del Espacio Económico Europeo.</p>
+    <p>Según la documentación pública de Anthropic vigente en la fecha de este documento:</p>
+    <ul>
+      <li>Sus términos comerciales incorporan un <strong>Acuerdo de Tratamiento de Datos (DPA)</strong> con <strong>Cláusulas Contractuales Tipo de la Comisión Europea</strong> (Módulo 2, responsable-a-encargado) como mecanismo de transferencia bajo el art. 46.2.c) RGPD.</li>
+      <li>Los inputs y outputs de la API se retienen un máximo de <strong>30 días</strong> (los registros técnicos, 7 días) y <strong>no se usan para entrenar modelos</strong> por defecto.</li>
+    </ul>
+    <p>Aparte de ese procesamiento puntual en Anthropic, guardamos nosotros mismos una copia de la foto en Supabase Storage (ver <a href="#seccion-2">sección 2</a>) — ya no es cierto que la única copia fuera de tu teléfono sea la de Anthropic. Supabase, por su parte, ofrece también un DPA con Cláusulas Contractuales Tipo para sus clientes.</p>
+
+    <h3 id="seccion-6">6. Terceros que participan en el tratamiento</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Tercero</th><th>Qué hace</th><th>Qué datos ve</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Anthropic, PBC</strong></td><td>Identifica la zapatilla y busca su precio actual</td><td>La foto que envías, en tránsito durante el análisis (no la almacena de forma persistente)</td></tr>
+          <tr><td><strong>Supabase, Inc.</strong></td><td>Gestiona tu cuenta (registro, inicio de sesión) y almacena tu foto de perfil, tu colección y las fotos de tus zapatillas</td><td>Email, contraseña (cifrada), nombre, avatar, y los datos y fotos de tu colección</td></tr>
+          <tr><td><strong>Apple Inc.</strong></td><td>Procesa el pago de tu suscripción a través de la App Store</td><td>Tus datos de pago (nunca los vemos nosotros) y tu Apple ID</td></tr>
+          <tr><td><strong>RevenueCat, Inc.</strong></td><td>Gestiona el estado de tu suscripción (activa, en prueba, cancelada)</td><td>Un identificador anónimo de suscriptor y el estado de tu compra — no tu nombre ni tu email</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>No compartimos, vendemos ni cedemos tus datos a nadie más.</p>
+
+    <h3 id="seccion-7">7. Plazo de conservación</h3>
+    <ul>
+      <li><strong>Fotos enviadas al Escáner (procesamiento por Anthropic):</strong> en los sistemas de Anthropic, hasta 30 días según su política estándar — esto es aparte de la copia que guardamos nosotros, ver el punto siguiente.</li>
+      <li><strong>Datos de tu cuenta (email, nombre, avatar):</strong> mientras mantengas tu cuenta activa. Si la eliminas desde la app (Perfil → Eliminar cuenta), se borran de forma permanente e inmediata.</li>
+      <li><strong>Fotos y datos de tu colección (Supabase):</strong> mientras esa zapatilla siga en tu colección. Se borran de forma permanente en el momento en que la eliminas desde la app, o cuando eliminas tu cuenta entera (lo que ocurra antes).</li>
+      <li><strong>Caché interna de precios</strong> (marca + modelo + colorway + precio, sin ningún dato que te identifique): hasta 24 horas en la memoria de nuestro servidor, para no repetir búsquedas idénticas el mismo día.</li>
+      <li><strong>Datos de suscripción:</strong> los conservan Apple y RevenueCat según sus propias políticas.</li>
+    </ul>
+
+    <h3 id="seccion-8">8. Tus derechos</h3>
+    <p>Bajo el RGPD, tienes derecho a:</p>
+    <ul>
+      <li><strong>Acceso</strong>: saber qué datos tenemos sobre ti.</li>
+      <li><strong>Rectificación</strong>: corregir datos inexactos.</li>
+      <li><strong>Supresión</strong>: pedir que se borren tus datos.</li>
+      <li><strong>Oposición</strong>: oponerte a un tratamiento concreto.</li>
+      <li><strong>Portabilidad</strong>: recibir tus datos en un formato reutilizable.</li>
+      <li><strong>Limitación</strong>: pedir que se restrinja el tratamiento en ciertos casos.</li>
+    </ul>
+    <p>La forma más directa de ejercer estos derechos es desde la propia app: puedes editar tu nombre y avatar, editar o borrar cualquier zapatilla de tu colección, o <strong>eliminar tu cuenta por completo</strong> desde Perfil → Eliminar cuenta, lo que borra de forma permanente tanto tu cuenta como los datos asociados a ella.</p>
+    <p>Para cualquier otra solicitud, escríbenos a <strong><a href="mailto:support@sneakvault.es">support@sneakvault.es</a></strong>. Te responderemos en el plazo que marca la normativa (como máximo un mes).</p>
+    <p><strong>Derecho a reclamar:</strong> si consideras que no hemos tratado tus datos correctamente, puedes presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> — <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+
+    <h3 id="seccion-9">9. Derechos de privacidad si resides en California (EE. UU.)</h3>
+    <p>Si resides en California, la <em>California Consumer Privacy Act</em> (CCPA), modificada por la <em>California Privacy Rights Act</em> (CPRA), te reconoce derechos adicionales sobre tus datos personales:</p>
+    <ul>
+      <li><strong>Derecho a saber</strong> qué categorías de datos personales recogemos sobre ti y con qué finalidad (ver <a href="#seccion-2">sección 2</a>).</li>
+      <li><strong>Derecho a eliminar</strong> tus datos personales.</li>
+      <li><strong>Derecho a corregir</strong> datos inexactos.</li>
+      <li><strong>Derecho a no sufrir discriminación</strong> por ejercer cualquiera de estos derechos.</li>
+      <li><strong>Derecho a optar por que no se vendan ni compartan tus datos</strong>: <strong>no vendemos ni compartimos tus datos personales con terceros con fines publicitarios</strong>, así que este derecho no requiere ninguna acción por tu parte.</li>
+    </ul>
+    <p>Igual que con el RGPD, la forma más directa de ejercerlos es desde la propia app (ver <a href="#seccion-8">sección 8</a>). Para cualquier otra solicitud, escríbenos a <a href="mailto:support@sneakvault.es">support@sneakvault.es</a>.</p>
+
+    <h3 id="seccion-10">10. Menores de edad</h3>
+    <p>SneakVault no está dirigida a menores de <strong>16 años</strong> en la Unión Europea (edad de consentimiento digital del RGPD) ni a menores de <strong>13 años</strong> en Estados Unidos (umbral de la <em>Children's Online Privacy Protection Act</em>, COPPA). No recogemos conscientemente datos de menores por debajo de estas edades. Si tienes motivos para pensar que un menor nos ha facilitado datos personales, escríbenos y lo revisaremos.</p>
+
+    <h3 id="seccion-11">11. Cambios en esta política</h3>
+    <p>Podemos actualizar esta política cuando cambie algo relevante en la app. Publicaremos siempre la fecha de la última actualización en la parte superior de este documento. Si el cambio es importante y afecta a usuarios de pago, te avisaremos también dentro de la app.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </nav>
+    <div>SneakVault — © 2026 Óliver Álvarez Pérez</div>
+  </div>
+</footer>
+
+</body>
+</html>
